@@ -1,0 +1,24 @@
+{
+  "name": "mongoose-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StormKing969/Mongoose-Tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StormKing969/Mongoose-Tutorial/issues"
+  },
+  "homepage": "https://github.com/StormKing969/Mongoose-Tutorial#readme",
+  "dependencies": {
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.7"
+  }
+}
