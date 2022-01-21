@@ -15,14 +15,43 @@ async function main() {
 
     const Fruit = mongoose.model("Fruit", fruitSchema);
 
-    const fruit = new Fruit({
+    const apple = new Fruit({
         name: "Apple",
         rating: 7,
         review: "Not bad",
         price: 1.20
     });
 
-    // fruit.save();
+    const banana = new Fruit({
+        name: "Banana",
+        rating: 3,
+        review: "Good for your health",
+        price: 0.80
+    });
+
+    const orange = new Fruit({
+        name: "Orange",
+        rating: 9,
+        review: "Tasty but better as a drink",
+        price: 1.25
+    });
+
+    const mango = new Fruit({
+        name: "Mango",
+        rating: 5,
+        review: "Ok",
+        price: 1.00
+    });
+
+    // apple.save();
+
+    // Fruit.insertMany([banana, orange, mango], function(err) {
+    //     if(err) {
+    //         console.log(err);
+    //     } else {
+    //         console.log("Successful");
+    //     }
+    // });
 
     const personSchema = new mongoose.Schema({
         name: String,
@@ -36,5 +65,15 @@ async function main() {
         age: 37
     });
 
-    person.save();
+    // person.save();
+
+    Fruit.find(function(err, fruits) {
+        if(err) {
+            console.log(err);
+        } else {
+            fruits.forEach(element => {
+                console.log(element.name);
+            });
+        }
+    });
   }
